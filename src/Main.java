@@ -1,7 +1,13 @@
 import main.board.BasicBoard;
+
 import java.util.Scanner;
+
+import static main.logic.MoveValidator.isValidMove;
+import static main.logic.StonePlacer.placeStone;
+
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("오목 게임을 시작합니다.");
         Scanner scanner = new Scanner(System.in);
         System.out.println("원하는 오목판의 크기를 입력하세요.");
@@ -34,16 +40,5 @@ public class Main {
             board.displayBoard();
             count++;
         }
-    }
-
-    private static boolean isValidMove(BasicBoard board, int x, int y) {
-        char[][] gameBoard = board.getBoard();
-        int size = board.getSize();
-        return x >= 0 && x < size && y >= 0 && y < size && gameBoard[x][y] == '-';
-    }
-
-    private static void placeStone(BasicBoard board, int x, int y, char stone) {
-        char[][] gameBoard = board.getBoard();
-        gameBoard[x][y] = stone;
     }
 }

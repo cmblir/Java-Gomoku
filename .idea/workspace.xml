@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53e110bb-0948-44c5-8b11-b8e6d5215cfd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/logic/MoveValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/logic/StonePlacer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/LogicTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/board/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +46,8 @@
     "JUnit.BoardTest.testBasicBoard.executor": "Run",
     "JUnit.BoardTest.testBoardInitializer.executor": "Run",
     "JUnit.BoardTest.testResizableBoard.executor": "Run",
+    "JUnit.LogicTest.testMoveValidator.executor": "Run",
+    "JUnit.LogicTest.testStonePlacer.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -58,26 +64,10 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.LogicTest.testStonePlacer">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaConcave" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardTest.testBasicBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaConcave" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BoardTest" />
-      <option name="METHOD_NAME" value="testBasicBoard" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,12 +104,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LogicTest.testMoveValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaConcave" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
+      <option name="METHOD_NAME" value="testMoveValidator" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogicTest.testStonePlacer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaConcave" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
+      <option name="METHOD_NAME" value="testStonePlacer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LogicTest.testStonePlacer" />
+        <item itemvalue="JUnit.LogicTest.testMoveValidator" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BoardTest.testBoardInitializer" />
         <item itemvalue="JUnit.BoardTest.testResizableBoard" />
-        <item itemvalue="JUnit.BoardTest.testBasicBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711716486587</updated>
       <workItem from="1711716487641" duration="1827000" />
-      <workItem from="1711718324561" duration="3078000" />
+      <workItem from="1711718324561" duration="4071000" />
     </task>
     <servers />
   </component>
