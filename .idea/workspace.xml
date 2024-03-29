@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53e110bb-0948-44c5-8b11-b8e6d5215cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaConcave.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/board/BasicBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/board/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/board/BoardFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/board/BoardInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/board/BoardStatusViewer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/board/ResizableBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.BoardTest.testBasicBoard.executor": "Run",
     "JUnit.BoardTest.testBoardInitializer.executor": "Run",
@@ -70,7 +58,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BoardTest.testResizableBoard">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="JavaConcave" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BoardTest.testBasicBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaConcave" />
       <extension name="coverage">
@@ -121,8 +116,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BoardTest.testResizableBoard" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.BoardTest.testBoardInitializer" />
+        <item itemvalue="JUnit.BoardTest.testResizableBoard" />
         <item itemvalue="JUnit.BoardTest.testBasicBoard" />
       </list>
     </recent_temporary>
@@ -143,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1711716486587</updated>
       <workItem from="1711716487641" duration="1827000" />
-      <workItem from="1711718324561" duration="1713000" />
+      <workItem from="1711718324561" duration="3078000" />
     </task>
     <servers />
   </component>
