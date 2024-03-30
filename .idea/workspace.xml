@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53e110bb-0948-44c5-8b11-b8e6d5215cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/logic/MoveValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/logic/StonePlacer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/LogicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/board/StoneMove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/logic/DrawChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/logic/VictoryChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/board/BasicBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/board/BasicBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/LogicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/LogicTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +47,15 @@
     "JUnit.BoardTest.testBasicBoard.executor": "Run",
     "JUnit.BoardTest.testBoardInitializer.executor": "Run",
     "JUnit.BoardTest.testResizableBoard.executor": "Run",
+    "JUnit.LogicTest.testCheckDiagonal1.executor": "Run",
+    "JUnit.LogicTest.testCheckDiagonal2.executor": "Run",
+    "JUnit.LogicTest.testCheckHorizontal.executor": "Run",
+    "JUnit.LogicTest.testCheckVertical.executor": "Run",
+    "JUnit.LogicTest.testDrawChecker.executor": "Run",
     "JUnit.LogicTest.testMoveValidator.executor": "Run",
     "JUnit.LogicTest.testStonePlacer.executor": "Run",
+    "JUnit.LogicTest.testVictory.executor": "Run",
+    "JUnit.LogicTest.testVictoryChecker.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -64,47 +72,8 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.LogicTest.testStonePlacer">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="JavaConcave" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardTest.testBoardInitializer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaConcave" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BoardTest" />
-      <option name="METHOD_NAME" value="testBoardInitializer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BoardTest.testResizableBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaConcave" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.BoardTest" />
-      <option name="METHOD_NAME" value="testResizableBoard" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogicTest.testMoveValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LogicTest.testVictory">
+    <configuration name="LogicTest.testCheckDiagonal1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaConcave" />
       <extension name="coverage">
         <pattern>
@@ -114,13 +83,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
-      <option name="METHOD_NAME" value="testMoveValidator" />
+      <option name="METHOD_NAME" value="testCheckDiagonal1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogicTest.testStonePlacer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicTest.testCheckDiagonal2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaConcave" />
       <extension name="coverage">
         <pattern>
@@ -130,7 +99,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
-      <option name="METHOD_NAME" value="testStonePlacer" />
+      <option name="METHOD_NAME" value="testCheckDiagonal2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogicTest.testCheckVertical" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaConcave" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
+      <option name="METHOD_NAME" value="testCheckVertical" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogicTest.testDrawChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaConcave" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
+      <option name="METHOD_NAME" value="testDrawChecker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogicTest.testVictory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaConcave" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.LogicTest" />
+      <option name="METHOD_NAME" value="testVictory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LogicTest.testStonePlacer" />
-        <item itemvalue="JUnit.LogicTest.testMoveValidator" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BoardTest.testBoardInitializer" />
-        <item itemvalue="JUnit.BoardTest.testResizableBoard" />
+        <item itemvalue="JUnit.LogicTest.testVictory" />
+        <item itemvalue="JUnit.LogicTest.testDrawChecker" />
+        <item itemvalue="JUnit.LogicTest.testCheckDiagonal2" />
+        <item itemvalue="JUnit.LogicTest.testCheckDiagonal1" />
+        <item itemvalue="JUnit.LogicTest.testCheckVertical" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +179,8 @@
       <option name="presentableId" value="Default" />
       <updated>1711716486587</updated>
       <workItem from="1711716487641" duration="1827000" />
-      <workItem from="1711718324561" duration="4071000" />
+      <workItem from="1711718324561" duration="4147000" />
+      <workItem from="1711804654618" duration="4818000" />
     </task>
     <servers />
   </component>

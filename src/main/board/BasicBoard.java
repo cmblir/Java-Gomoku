@@ -46,4 +46,9 @@ public class BasicBoard implements Board {
     public char[][] getBoard() {
         return board;
     }
+
+    @Override
+    public void placeStone(int x, int y, char stone) {
+        board[x][y] = stone;
+    }
 }
