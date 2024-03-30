@@ -18,7 +18,7 @@ public class VictoryChecker {
             if (gameBoard[x][i] == stone) {
                 count++;
                 if (count == WINNING_LENGTH) {
-                    System.out.println("수평 승리");
+                    System.out.println(stone + "의 수평 승리");
                     return true;
                 }
             } else {
@@ -36,7 +36,7 @@ public class VictoryChecker {
             if (gameBoard[i][y] == stone) {
                 count++;
                 if (count == WINNING_LENGTH) {
-                    System.out.println("수직 승리");
+                    System.out.println(stone + "의 수직 승리");
                     return true;
                 }
             } else {
@@ -54,7 +54,7 @@ public class VictoryChecker {
             if (gameBoard[x + i][y + i] == stone) {
                 count++;
                 if (count == WINNING_LENGTH) {
-                    System.out.println("좌측 대각 승리");
+                    System.out.println(stone + "의 대각 승리");
                     return true;
                 }
             } else {
@@ -72,7 +72,7 @@ public class VictoryChecker {
             if (gameBoard[x + i][y - i] == stone) {
                 count++;
                 if (count == WINNING_LENGTH) {
-                    System.out.println("우측 대각 승리");
+                    System.out.println(stone + "의 우측 대각 승리");
                     return true;
                 }
             } else {

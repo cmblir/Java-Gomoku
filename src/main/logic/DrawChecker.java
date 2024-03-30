@@ -12,6 +12,7 @@ public class DrawChecker {
             }
         }
         // 빈 공간이 없음 == 게임이 끝났으나 승패가 결정 안됨 -> 무승부
+        System.out.println("더 이상 진행할 공간이 없습니다. 무승부");
         return true;
     }
 }
