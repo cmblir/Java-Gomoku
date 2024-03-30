@@ -77,7 +77,11 @@ public class Main {
                 }
             }
             String inputed = scanner.nextLine();
-            if (inputed.equals("그만")) break;
+            if (inputed.equals("그만")) {
+                System.out.println(stone == 'X' ? "백돌이 그만두었습니다." : "흑돌이 그만두었습니다.");
+                System.out.println(stone == 'X' ? "흑돌이 승리하였습니다." : "백돌이 승리하였습니다.");
+                break;
+            }
             if (inputed.equals("변경")) {
                 resize = true;
                 continue;
