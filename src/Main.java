@@ -1,19 +1,21 @@
+import main.algorithm.AlphaBetaPruning;
 import main.board.BasicBoard;
 import main.board.ResizableBoard;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static main.logic.MoveValidator.isValidMove;
 import static main.logic.StonePlacer.placeStone;
 import static main.logic.VictoryChecker.checkVictory;
 import static main.logic.DrawChecker.isDraw;
+import main.algorithm.AlphaBetaPruning;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("오목 게임을 시작합니다.");
         Scanner scanner = new Scanner(System.in);
+        AlphaBetaPruning game = new AlphaBetaPruning();
         int concaveSize = 0;
         int resizedConcaveSize = 0;
 
@@ -33,8 +35,8 @@ public class Main {
         System.out.println("게임을 그만하고 싶을 경우 \"그만\"을 입력하세요.");
         System.out.println("게임을 재시작하고 싶을 경우 \"재시작\"을 입력하세요.");
         System.out.println("오목판 크기를 변경하고 싶으면 \"변경\"을 입력하세요.");
-        System.out.println("흑돌부터 시작합니다. 돌을 놔둘 좌표를 입력하세요.");
         System.out.println("흑돌은 'O', 백돌은 'X'이며, 좌표 입력 예시는 5,3 입니다.");
+
         int count = 1;
         int x = 0; // x 좌표값
         int y = 0; // y 좌표값
@@ -42,6 +44,7 @@ public class Main {
         boolean resize = false; // 리사이즈여부
         boolean restart = false; // 재시작여부
         char stone = 'O';
+        String playerStone = "없음";
 
         // 게임 시작
         while (true) {
@@ -76,6 +79,23 @@ public class Main {
                     stone = 'O';
                 }
             }
+
+            // 돌 선택
+            char player;
+            char botPlayer;
+
+            if (playerStone.equals("없음")) {
+                playerStone = choiceStone();
+            }
+
+            if (playerStone.equals("백돌")) {
+                player = 'O';
+                botPlayer = 'X';
+            } else {
+                player = 'X';
+                botPlayer = 'O';
+            }
+
             String inputed = scanner.nextLine();
             if (inputed.equals("그만")) {
                 System.out.println(stone == 'X' ? "백돌이 그만두었습니다." : "흑돌이 그만두었습니다.");
@@ -112,6 +132,9 @@ public class Main {
             if (isDraw(board)) break;
 
             board.displayBoard();
+            int[] bestMove = game.findBestMove(board.getBoard(), concaveSize, botPlayer);
+            String bestChoice = bestMove[0] + "," + bestMove[1];
+            System.out.println(bestChoice);
             count++;
         }
     }
@@ -128,5 +151,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String number = scanner.next();
         return number;
+    }
+
+    private static String choiceStone() throws NumberFormatException {
+        System.out.println("시작할 돌을 입력하세요.");
+        System.out.println("돌은 흑돌과 백돌이 있습니다.");
+        Scanner scanner = new Scanner(System.in);
+        String stone = scanner.next();
+        System.out.println(stone);
+        if (stone.equals("흑돌") || stone.equals("백돌")) {
+            System.out.println("흑돌부터 시작합니다. 돌을 놔둘 좌표를 입력하세요.");
+        } else {
+            System.out.println("존재하지 않는 돌을 선택하였습니다.");
+            choiceStone();
+        }
+        return stone;
     }
 }
