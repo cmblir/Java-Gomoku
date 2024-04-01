@@ -4,6 +4,7 @@ import main.board.Board;
 
 public class AlphaBetaPruning {
 
+
     // 예시 오목 게임 보드 출력
     public void printBoard(char[][] board, int size) {
         for (int i = 0; i < size; i++) {
